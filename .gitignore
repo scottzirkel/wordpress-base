@@ -1,0 +1,11 @@
+vendor
+wp
+deploy
+components
+media
+node_modules
+app/plugins/*
+app/muplugins/*
+app/themes/*
+app/upgrade/*
+!app/themes/{current_theme}

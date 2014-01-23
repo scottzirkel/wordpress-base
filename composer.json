@@ -1,0 +1,36 @@
+{
+  "repositories": [
+    {
+      "type": "package",
+      "package": {
+        "name": "wordpress",
+        "type": "webroot",
+        "version": "3.8",
+        "dist": {
+          "type": "zip",
+          "url": "https://github.com/WordPress/WordPress/archive/3.8.zip"
+        },
+        "require" : {
+          "fancyguy/webroot-installer": "1.0.0"
+        }
+      }
+    }
+  ],
+  "require": {
+    "php": ">=5.3.0",
+    "wordpress": "3.8",
+    "roots/wp-stage-switcher": "@stable",
+    "fancyguy/webroot-installer": "@stable",
+    "components/modernizr": "@stable",
+    "components/jquery": "@stable",
+    "components/bootstrap": "@stable"
+  },
+  "extra": {
+    "installer-paths": {
+      "app/plugins/{$name}/": ["type:wordpress-plugin"],
+      "app/mu-plugins/{$name}/": ["type:wordpress-muplugin"]
+    },
+    "webroot-dir": "wp",
+    "webroot-package": "wordpress"
+  }
+}
