@@ -8,13 +8,13 @@ Installs the following:
 
 To setup:
 
-Setup Composer
+Setup [Composer](https://getcomposer.org)
 
 ````
 composer install
 ````
 
-Setup Grunt
+Setup [Grunt](http://gruntjs.com)
 
 ````
 npm install
