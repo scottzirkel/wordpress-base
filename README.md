@@ -1,6 +1,6 @@
 #WordPress Base Files
 
-This is what I use to stat my WordPress projects. It's based on the work that swalkingshaw(https://github.com/swalkinshaw) has done with [Roots](http://roots.io)
+This is what I use to stat my WordPress projects. It's based on the work that [swalkingshaw](https://github.com/swalkinshaw) has done with [Roots](http://roots.io)
 
 Installs the following:
 
