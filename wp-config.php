@@ -3,20 +3,43 @@
 // Load database info and local development parameters
 // ===================================================
 
+if($_SERVER['HTTPS'])
+    $protocol = 'https://';
+else
+    $protocol = 'http://';
+
 $envs = array(
-  'development' => 'http://app.dev/',
-  'staging'     => 'http://app.staging.com',
-  'production'  => 'http://app.com'
+  'development' => $protocol . 'app.dev/',
+  'staging'     => $protocol . 'staging.app.com/',
+  'production'  => $protocol . 'app.com/'
 );
 define('ENVIRONMENTS', serialize($envs));
 
-define('WP_ENV', 'development');
+$url = $protocol . $_SERVER['HTTP_HOST'].'/';
+
+switch($url)
+{
+    case $envs['development']:
+        define('WP_ENV', 'development');
+    break;
+    case $envs['staging']:
+        define('WP_ENV', 'staging');
+    break;
+    case $envs['production']:
+        define('WP_ENV', 'production');
+    break;
+    default:
+        define('WP_ENV', 'production');
+    break;
+}
+
+
 
 switch(WP_ENV) {
     case 'development':
         define( 'DB_NAME', '' );
-        define( 'DB_USER', '' );
-        define( 'DB_PASSWORD', '' );
+        define( 'DB_USER', 'root' );
+        define( 'DB_PASSWORD', 'root' );
         define( 'DB_HOST', 'localhost' );
     break;
     case 'staging':
@@ -38,11 +61,11 @@ switch(WP_ENV) {
 // ========================
 // Custom Content Directory
 // ========================
-define( 'WP_HOME', 'http://' . $_SERVER['HTTP_HOST'] );
+define( 'WP_HOME', $protocol . $_SERVER['HTTP_HOST'] );
 define('CONTENT_DIR', '/app');
 define('WP_CONTENT_DIR', dirname(__FILE__) . CONTENT_DIR);
-define('WP_CONTENT_URL', 'http://' . $_SERVER['HTTP_HOST'] . CONTENT_DIR);
-define('UPLOADS', '../media/uploads');
+define('WP_CONTENT_URL', $protocol . $_SERVER['HTTP_HOST'] . CONTENT_DIR);
+define('UPLOADS', '../public/uploads');
 
 // ================================================
 // You almost certainly do not want to change these
@@ -101,7 +124,7 @@ define('WP_DEBUG', false);
 
 /** Absolute path to the WordPress directory. */
 if ( !defined('ABSPATH') )
-	define('ABSPATH', dirname(__FILE__) . '/wp/');
+    define('ABSPATH', dirname(__FILE__) . '/wp/');
 
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');
