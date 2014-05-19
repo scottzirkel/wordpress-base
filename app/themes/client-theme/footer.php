@@ -1,3 +1,5 @@
+    <script src="<?=$GLOBALS['template_directory']?>/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="<?=$GLOBALS['template_directory']?>/js/main.min.js"></script>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
         // (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=

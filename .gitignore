@@ -2,5 +2,5 @@ vendor
 wp
 components
 app/plugins/*
-app/themes/bower_components/*
-app/themes/node_modules/*
+app/themes/client-theme/bower_components/*
+app/themes/client-theme/node_modules/*

@@ -30,6 +30,8 @@
     ?></title>
     <link rel="stylesheet" href="<?=$GLOBALS['template_directory']?>">
     <link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>">
+    <script src="<?=$GLOBALS['template_directory']?>/bower_components/modernizr/modernizr.js"></script>
+    <script src="<?=$GLOBALS['template_directory']?>/bower_components/jquery/dist/jquery.min.js" type="text/javascript" charset="utf-8"></script>
     <?wp_head()?>
   </head>
   <body>
