@@ -10,7 +10,7 @@ Installs the following:
 
 To setup:
 
-Setup [Composer](https://getcomposer.org)
+###Setup [Composer](https://getcomposer.org)
 
 Composer installs WordPress and some of its plugins for you.
 
@@ -18,7 +18,7 @@ Composer installs WordPress and some of its plugins for you.
 composer install
 ````
 
-Setup [Grunt](http://gruntjs.com)
+###Setup [Grunt](http://gruntjs.com)
 
 Grunt will compile your JavaScript & Less files, as well as optimize your images.
 Run this from your theme folder.
@@ -29,7 +29,7 @@ cd app/themes/YOUR-THEME
 npm install
 ````
 
-Setup [Bower](http://bower.io)
+###Setup [Bower](http://bower.io)
 
 Bower is a front-end dependency manager. Here we are installing jQuery, Bootstrap,
 Font Awesome, etc.
@@ -41,6 +41,7 @@ cd app/themes/YOUR-THEME
 bower install
 ````
 
+####Notes
 
 This is very much a work in progress. Lots of plans to build this out fuller. Add in go-to plugins, shore up the Grunt work flow better.
 
@@ -60,4 +61,4 @@ app/themes/YOUR-THEME/bower_components - Bower dependencies folder. (created by 
 
 wp - All wp files go in here, with the exception of the wp-content. This should probably be named something more secure and less WordPress-y. (created by composer)
 
-Notes: Stop using the word typically so often.
+Other Notes: Stop using the word typically so often.
