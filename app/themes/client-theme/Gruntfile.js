@@ -6,8 +6,8 @@ module.exports = function(grunt) {
                 separator: '\n'
             },
             dist: {
-                src: ['src/js/main.js'],
-                dest: 'assets/js/main.js'
+                src: ['app/themes/THEME-NAME/js/src/main.js'],
+                dest: 'app/themes/THEME-NAME/js/concat/main.js'
             }
         },
         uglify: {
@@ -16,12 +16,12 @@ module.exports = function(grunt) {
             },
             dist: {
                 files: {
-                    'assets/js/main.min.js': ['<%= concat.dist.dest %>']
+                    'app/themes/THEME-NAME/js/main.min.js': ['<%= concat.dist.dest %>']
                 }
             }
         },
         jshint: {
-            files: ['gruntfile.js', 'src/js/*.js'],
+            files: ['gruntfile.js', 'app/themes/THEME-NAME/js/*.js'],
             options: {
                 globals: {
                     jQuery: true,
@@ -33,8 +33,8 @@ module.exports = function(grunt) {
         less:{
             dist:{
                 files: {
-                    'assets/css/core.min.css': [
-                        'src/less/core.less'
+                    'app/themes/THEME-NAME/css/core.min.css': [
+                        'app/themes/THEME-NAME/less/core.less'
                     ]
                 },
                 banner: '/*! Core Stylesheet <%= grunt.template.today("dd-mm-yyyy") %> */\n',
@@ -48,7 +48,7 @@ module.exports = function(grunt) {
         watch: {
             less:{
                 files: [
-                    'src/less/*.less'
+                    'app/themes/THEME-NAME/less/*.less'
                 ],
                 tasks: ['less']
             },
@@ -59,8 +59,8 @@ module.exports = function(grunt) {
         },
          clean: {
           dist: [
-            'assets/css/core.min.css',
-            'assets/js/main.min.js'
+            'app/themes/THEME-NAME/css/core.min.css',
+            'app/themes/THEME-NAME/js/main.min.js'
           ]
         }
     });
