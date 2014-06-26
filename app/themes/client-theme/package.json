@@ -1,16 +1,22 @@
 {
-  "name": "wordpress-base",
-  "version": "0.1.0",
-  "description": "Everything you need to start up a WordPress project.",
-  "author": "Scott Zirkel",
+  "name": "starter",
+  "version": "1.0.0",
+  "description": "Web project starter",
+  "main": "gulpfile.js",
   "devDependencies": {
-    "grunt": "~0.4.2",
-    "grunt-contrib-less": "~0.9.0",
-    "grunt-contrib-watch": "~0.5.3",
-    "grunt-contrib-uglify": "~0.3.0",
-    "grunt-contrib-concat": "~0.3.0",
-    "grunt-contrib-qunit": "~0.4.0",
-    "grunt-contrib-jshint": "~0.8.0",
-    "grunt-contrib-clean": "~0.5.0"
-  }
+    "gulp": "^3.8.1",
+    "gulp-autoprefixer": "0.0.7",
+    "gulp-concat": "^2.2.0",
+    "gulp-jshint": "^1.6.2",
+    "gulp-less": "^1.2.3",
+    "gulp-minify-css": "^0.3.4",
+    "gulp-sourcemaps": "^0.4.1",
+    "gulp-uglify": "^0.3.0",
+    "gulp-watch": "^0.6.6-1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Scott Zirkel <scott@scottzirkel.com>",
+  "license": "MIT"
 }

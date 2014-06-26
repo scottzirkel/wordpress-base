@@ -1,12 +1,11 @@
 {
-  "name": "client-theme",
-  "version": "0.0.0",
-  "homepage": "https://github.com/scottzirkel/wordpress-base",
+  "name": "starter",
+  "version": "1.0.0",
   "authors": [
     "Scott Zirkel <scott@scottzirkel.com>"
   ],
-  "description": "Base starter theme for WordPress",
-  "private": true,
+  "main": "index.html",
+  "license": "MIT",
   "ignore": [
     "**/.*",
     "node_modules",
@@ -15,7 +14,8 @@
     "tests"
   ],
   "dependencies": {
+    "modernizr": "~2.8.2",
     "bootstrap": "~3.1.1",
-    "modernizr": "~2.8.2"
+    "font-awesome": "~4.1.0"
   }
 }
