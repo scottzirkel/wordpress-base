@@ -3,7 +3,6 @@
 
 # TEAM
 
-    Scott Zirkel -- Creative Director, Markup -- @scottzirkel
     <name> -- <role> -- <twitter>
 
 # THANKS
@@ -13,4 +12,5 @@
 # TECHNOLOGY COLOPHON
 
     HTML5, CSS3
-    jQuery, Modernizr, Bootstrap, Font Awesome
+        Normalize.css, jQuery, Modernizr
+

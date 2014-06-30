@@ -1,6 +1,6 @@
 #WordPress Base Files
 
-This is what I use to stat my WordPress projects. It's based on the work that [swalkingshaw](https://github.com/swalkinshaw) has done with [Roots](http://roots.io).
+This is what I use to start my WordPress projects. It's based on the work that [swalkingshaw](https://github.com/swalkinshaw) has done with [Roots](http://roots.io).
 
 Installs the following:
 
@@ -19,6 +19,9 @@ composer install
 ````
 
 ###Setup [Grunt](http://gruntjs.com)
+
+I have created a [bash script](https://gist.github.com/scottzirkel/54ffbd52cfb2dbc4682f) to pull this & my html starter down and install it for you in the working directory.
+Feel free to use it to do the same.
 
 Grunt will compile your JavaScript & Less files, as well as optimize your images.
 Run this from your theme folder.
