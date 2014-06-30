@@ -20,7 +20,7 @@ composer install
 
 ###Setup [Grunt](http://gruntjs.com)
 
-I have created a [bash script](https://gist.github.com/scottzirkel/54ffbd52cfb2dbc4682f) to pull this & my html starter down and install it for you in the working directory.
+I have created a [bash script](https://gist.github.com/scottzirkel/54ffbd52cfb2dbc4682f) to pull this & my [html starter](https://github.com/scottzirkel/html-starter) down and install it for you in the working directory.
 Feel free to use it to do the same.
 
 Grunt will compile your JavaScript & Less files, as well as optimize your images.
