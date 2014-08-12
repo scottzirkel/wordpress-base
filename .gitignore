@@ -3,5 +3,5 @@ wp
 components
 composer.lock
 app/plugins/*
-app/themes/client-theme/bower_components/*
-app/themes/client-theme/node_modules/*
+app/themes/THEME-NAME/bower_components/*
+app/themes/THEME-NAME/node_modules/*
