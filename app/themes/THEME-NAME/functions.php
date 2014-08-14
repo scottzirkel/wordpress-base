@@ -22,4 +22,14 @@
     echo 'Fueled by <a href="http://www.wordpress.org" target="_blank">WordPress</a> | Designed by <a href="http://www.thealaragroup.net" target="_blank">The Alara Group</a></p>';
   }
   add_filter('admin_footer_text', 'remove_footer_admin');
+
+  // Changes role "Admin" to "Developer"
+  function change_role_name() {
+    global $wp_roles;
+    if ( ! isset( $wp_roles ) )
+      $wp_roles = new WP_Roles();
+      $wp_roles->roles['administrator']['name'] = 'Developer';
+      $wp_roles->role_names['administrator'] = 'Developer';
+  }
+  add_action('init', 'change_role_name');
 ?>

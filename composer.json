@@ -30,7 +30,8 @@
     "components/bootstrap": "@stable",
     "wpackagist-plugin/advanced-custom-fields": "@stable",
     "wpackagist-plugin/wp-admin-ui-customize": "@stable",
-    "wpackagist-plugin/wordpress-seo": "@stable"
+    "wpackagist-plugin/wordpress-seo": "@stable",
+    "wpackagist-plugin/wp-help": "@stable"
   },
   "extra": {
     "installer-paths": {
