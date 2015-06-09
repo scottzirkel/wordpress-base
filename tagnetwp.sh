@@ -78,4 +78,7 @@ sed -i "" "s/{SECURE_AUTH_SALT}/$secure_auth_salt/g" "public/wp-config.php"
 sed -i "" "s/{LOGGED_IN_SALT}/$logged_in_salt/g" "public/wp-config.php"
 sed -i "" "s/{NONCE_SALT}/$nonce_salt/g" "public/wp-config.php"
 
+echo "Copying HTACCESS"
+mv .htaccess public/.htaccess
+
 echo "Congrats, the easy part is over. Now go save that princess!"
