@@ -1,7 +1,0 @@
-vendor
-wp
-components
-composer.lock
-app/plugins/*
-app/themes/THEME-NAME/bower_components/*
-app/themes/THEME-NAME/node_modules/*
