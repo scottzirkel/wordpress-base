@@ -10,12 +10,6 @@ gulp.task('build:staging', ['clean'], function (callback) {
       'svg',
       'images',
     ],
-    [
-      'angular:app',
-      'angular:template',
-      'angular:htaccess',
-    ],
     'bower',
-    ['angular:kludge'],
     callback);
 });
