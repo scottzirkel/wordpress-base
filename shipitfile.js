@@ -91,10 +91,10 @@ module.exports = function (shipit) {
     shipit.log(chalk.green('Installing Gulp'));
     var gulpTask;
     if (shipit.environment === 'staging') {
-      gulpTask = 'gulp build:staging';
+      gulpTask = 'gulp staging';
     }
     if (shipit.environment === 'production') {
-      gulpTask = 'gulp build:production';
+      gulpTask = 'gulp production';
     }
     return shipit.local(gulpTask, {cwd: '../tmp/' + config.projectName})
       .then(function () {
