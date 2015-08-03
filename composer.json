@@ -24,17 +24,11 @@
   "scripts": {
     "post-install-cmd": [
       "cp -r wp/index.php public/index.php",
-      "cp -r wp/wp-config-sample.php public/wp-config.php",
-      "npm install",
-      "bower install",
-      "echo 'Please update .gitignore, .bowerrc, shipitconfig.js & public/wp-config.php'"
+      "cp -r wp/wp-config-sample.php public/wp-config.php"
     ],
     "post-update-cmd": [
       "cp -r wp/index.php public/index.php",
-      "cp -r wp/wp-config-sample.php public/wp-config.php",
-      "npm install",
-      "bower install",
-      "echo 'Please update .gitignore, .bowerrc, shipitconfig.js & public/wp-config.php'"
+      "cp -r wp/wp-config-sample.php public/wp-config.php"
     ]
   }
 }

@@ -195,24 +195,27 @@ module.exports = function (shipit) {
   // shipit.on('fetched', function () {
   //   shipit.start(['npm']);
   // });
-
-  // shipit.on('installed-npm', function () {
-  //   shipit.start(['bower']);
-  // });
-  //
-  // shipit.on('installed-bower', function () {
-  //   shipit.start(['gulp']);
-  // });
-
   shipit.on('fetched', function () {
     shipit.start(['composer']);
+  });
+
+  shipit.on('installed-composer', function () {
+    shipit.start(['npm']);
+  });
+
+  shipit.on('installed-npm', function () {
+    shipit.start(['bower']);
+  });
+
+  shipit.on('installed-bower', function () {
+    shipit.start(['gulp']);
   });
 
   // shipit.on('installed-gulp', function () {
   //   shipit.start(['build-tmp']);
   // });
 
-  shipit.on('installed-composer', function () {
+  shipit.on('installed-gulp', function () {
     shipit.start(['build-tmp']);
   });
 
