@@ -32,6 +32,24 @@ module.exports = function (shipit) {
   });
 
   /*
+  * Runs Composer in the workspace
+  * Should run NPM & Bower too... but might not, so... yeah...
+  */
+
+  shipit.blTask('composer', function () {
+    shipit.log(chalk.green('Installing Composer'));
+    return shipit.local('composer install', {cwd: '../tmp/' + config.projectName})
+      .then(function () {
+        shipit.log(chalk.green('Composer Installed'));
+        shipit.emit('installed-composer');
+      })
+      .catch(function () {
+        shipit.log(chalk.bgRed('Failed to install Composer'));
+        shipit.stop();
+      });
+  });
+
+  /*
   Runs NPM in the workspace
   */
 
@@ -174,19 +192,27 @@ module.exports = function (shipit) {
       });
   });
 
+  // shipit.on('fetched', function () {
+  //   shipit.start(['npm']);
+  // });
+
+  // shipit.on('installed-npm', function () {
+  //   shipit.start(['bower']);
+  // });
+  //
+  // shipit.on('installed-bower', function () {
+  //   shipit.start(['gulp']);
+  // });
+
   shipit.on('fetched', function () {
-    shipit.start(['npm']);
+    shipit.start(['composer']);
   });
 
-  shipit.on('installed-npm', function () {
-    shipit.start(['bower']);
-  });
+  // shipit.on('installed-gulp', function () {
+  //   shipit.start(['build-tmp']);
+  // });
 
-  shipit.on('installed-bower', function () {
-    shipit.start(['gulp']);
-  });
-
-  shipit.on('installed-gulp', function () {
+  shipit.on('installed-composer', function () {
     shipit.start(['build-tmp']);
   });
 

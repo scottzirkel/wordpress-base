@@ -1,0 +1,7 @@
+public/themes/YOUR_THEME_NAME/assets/bower_components
+vendor
+wp
+.DS_Store
+public/uploads
+node_modules
+composer.lock
