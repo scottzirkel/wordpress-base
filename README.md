@@ -18,7 +18,8 @@ Composer installs WordPress and some of its plugins for you.
 composer install
 ````
 
-Running Composer **SHOULD** run NPM & Bower for you... if not, run them manually such as this:
+Change the theme name in the public/themes directory
+Update the theme name in gulp/config.js, .bowerrc, shipitconfig.js
 
 ### Setup [Gulp](http://gulpjs.com/)
 
