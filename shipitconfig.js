@@ -1,12 +1,12 @@
 module.exports = {
-  projectName: 'TEST',
+  projectName: 'projectName',
   repo: 'git@github.com:scottzirkel/wordpress-base.git',
   staging: {
-    servers: 'tagnetdev@70.32.76.228',
-    deployTo: '/var/www/vhosts/alaradevelopment.com/TEST.alaradevelopment.com'
+    servers: 'stagingUser@server',
+    deployTo: 'stagingPath'
   },
   production: {
-    servers: '{PRODUCTION-USER}@70.32.76.228',
-    deployTo: '/var/www/vhosts/{DOMAIN-NAME}'
+    servers: 'productionUser@server',
+    deployTo: 'productionPath'
   }
 };
