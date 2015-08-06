@@ -1,46 +1,15 @@
-var src           = 'app',
-    build         = 'build',
+var src           = 'dev',
+    build         = 'public/themes/THEME_NAME',
     dependencies  = src + '/_components',
     assets        = src + '/assets',
     buildAssets   = build + '/assets';
 
 module.exports = {
-  bower: {
-    css: {
-      src: [dependencies + '/**/css/*.css', dependencies + '/**/dist/*.css', dependencies + '/**/*.css'],
-      dest: buildAssets + '/css'
-    },
-    js: {
-      src: [dependencies + '/dist/**.min.js', dependencies + '/**/*.js', !dependencies + '/src/*.js'],
-      dest: buildAssets + '/js'
-    }
-  },
-  browsersync: {
-    server: {
-      baseDir: [build]
-    },
-    port: 9996,
-    files: [
-      buildAssets + '/css/*.css',
-      buildAssets + '/js/.js',
-      buildAssets + '/img/**.{jpg,jpeg,gif,png}'
-    ]
-  },
-  clean: {
-    src: build,
-    options: {
-      force: true
-    }
-  },
   compass: {
     src: src + '/sass/core.scss',
     dest: buildAssets + '/css',
     require: ['susy'],
     autoprefixer: "'last 2 version', 'safari 5', 'ie 8', 'ie 9', 'ff 17', 'opera 12.1', 'ios 6', 'android 4'",
-  },
-  html: {
-    src: [src + '/html/**/*.html', !src + '/html/templates/*'],
-    dest: build
   },
   images: {
     src: src + '/images/**/*.{jpg,jpeg,gif,png}',
@@ -113,7 +82,6 @@ module.exports = {
   },
   watch: {
     images: src + '/images/**/*.{jpg,jpeg,gif,png}',
-    html: src + '/html/**/*.html',
     sass: src + '/sass/**/*.{sass,scss}',
     js: src + '/js/**/*.js'
   }
