@@ -6,7 +6,7 @@
   "devDependencies": {
     "chalk": "^1.0.0",
     "gulp": "^3.8.8",
-    "gulp-autoprefixer": "^2.1.0",
+    "gulp-autoprefixer": "^2.3.1",
     "gulp-changed": "^1.1.0",
     "gulp-compass": "^2.0.4",
     "gulp-concat": "^2.4.3",
@@ -15,7 +15,9 @@
     "gulp-minify-css": "^1.0.0",
     "gulp-preprocess": "^1.2.0",
     "gulp-rsync": "0.0.5",
+    "gulp-sass": "^2.0.4",
     "gulp-scss-lint": "^0.1.4",
+    "gulp-sourcemaps": "^1.5.2",
     "gulp-uglify": "^1.1.0",
     "gulp-usemin": "^0.3.11",
     "gulp-util": "^3.0.6",

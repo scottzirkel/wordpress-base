@@ -5,12 +5,6 @@ var src           = 'dev',
     buildAssets   = build + '/assets';
 
 module.exports = {
-  compass: {
-    src: src + '/sass/core.scss',
-    dest: buildAssets + '/css',
-    require: ['susy'],
-    autoprefixer: "'last 2 version', 'safari 5', 'ie 8', 'ie 9', 'ff 17', 'opera 12.1', 'ios 6', 'android 4'",
-  },
   images: {
     src: src + '/images/**/*.{jpg,jpeg,gif,png}',
     dest: buildAssets + '/img'
@@ -40,6 +34,10 @@ module.exports = {
     src: src + '/pdf/*.pdf',
     dest: buildAssets + '/pdf'
   },
+  sass: {
+    src: src + '/sass/core.scss',
+    dest: buildAssets + '/css',
+  },
   sassdoc: {
     src: src + '/sass',
     dest: build + '/docs',
@@ -51,33 +49,6 @@ module.exports = {
     src: src + '/sass/*.scss',
     options: {
       'config': '/scsslint.yaml'
-    }
-  },
-  staging: {
-    src: buildAssets,
-    css: buildAssets + '/css',
-    js: buildAssets + '/js',
-    ftp: {
-      conn: {
-        host: '70.32.76.228',
-        user: 'tagnetdev',
-        password: 'TagNetDev2014!',
-        parallel: 10
-      },
-      globs: [
-        build
-      ]
-    },
-    rsync: {
-      src: build + '/**',
-      root: build,
-      hostname: '70.32.76.228',
-      username: 'tagnetdev',
-      destination: '/var/www/vhosts/alaradevelopment.com/goetx.alaradevelopment.test',
-      options: {
-        verbose: true,
-        progress: true
-      }
     }
   },
   watch: {
